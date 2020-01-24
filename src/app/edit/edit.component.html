@@ -1,0 +1,82 @@
+
+ <mat-card>
+  <mat-card-title>Update  Drive</mat-card-title>
+<mat-card-content>
+<form >
+<p>
+    <mat-form-field appearance="Company Name">
+      <mat-label>Company Name</mat-label>
+      <input matInput placeholder="Placeholder" name="companyName" [(ngModel)]="obj.companyName">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="No of Resources">
+      <mat-label>No of Resources</mat-label>
+      <input matInput placeholder="Placeholder"   name="resources" [(ngModel)]="obj.resources">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="Exp Required">
+      <mat-label>Exp Required</mat-label>
+      <input matInput placeholder="Placeholder"  name="exprequired"  [(ngModel)]="obj.exprequired">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="CTC">
+      <mat-label>CTC</mat-label>
+      <input matInput placeholder="Placeholder" name="ctc"  [(ngModel)]="obj.ctc">
+    </mat-form-field>
+  </p>
+  <p>
+  <mat-form-field>
+    <select placeholder="Joining Criteria" name="joiningcriteria"  [(ngModel)]="obj.joiningcriteria" matNativeControl required>
+      <option value="0">No training and direct joining</option>
+      <option value="1">3 Months internship and then joining</option>
+    </select>
+  </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="Bond">
+      <mat-label>Bond</mat-label>
+      <input matInput placeholder="Placeholder" name="bond"  [(ngModel)]="obj.bond">
+    </mat-form-field>
+  </p>
+  
+<p>
+  <mat-form-field>
+    <select placeholder="Position"  name="position"  [(ngModel)]="obj.position"  matNativeControl required>  
+      <option value="0">Full Stack Developer</option>
+      <option value="1">UI Developer</option>
+      <option value="2">Middleware and BackEnd</option>
+      <option value="3">Software Tester</option>
+      
+    </select>
+  </mat-form-field>
+</p>
+  <p>
+    <mat-form-field appearance="Follow">
+      <mat-label>FollowUp</mat-label>
+      <input matInput placeholder="Placeholder" name="follow"  [(ngModel)]="obj.follow">
+    </mat-form-field>
+  </p>
+  <p>
+  <mat-form-field>
+    <select placeholder="Education Criteria " name="educriteria"  [(ngModel)]="obj.educriteria" matNativeControl required>
+      <option value="0">BE,Comp/It</option>
+      <option value="1">BCA/MCA</option>
+      <option value="2">12th</option>
+    </select>
+  </mat-form-field>
+</p>
+  <div class="button">
+    <button type="submit" (click)="onAdd()" mat-raised-button  color ="primary">Submit</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>
+
+
+
+

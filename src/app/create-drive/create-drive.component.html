@@ -1,0 +1,94 @@
+<mat-card>
+    <mat-card-title>Create Student Drive</mat-card-title>
+  <mat-card-content>
+  <form [formGroup]="createdrive" (ngSubmit)="onAdd()">
+  <p>
+      <mat-form-field appearance="Company Name">
+        <mat-label>Company Name</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="companyName">
+        <mat-error *ngIf="createdrive.get('companyName').errors?.required"> Company Name is required</mat-error>
+  
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="No of Resources">
+        <mat-label>No of Resources</mat-label>
+        <input matInput placeholder="Placeholder"   formControlName="resources">
+        <mat-error *ngIf="createdrive.get('resources').errors?.required">  Resources is required</mat-error>
+  <nav>n</nav>
+  
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="Exp Required">
+        <mat-label>Exp Required</mat-label>
+        <input matInput placeholder="Placeholder"  formControlName="exprequired">
+        <mat-error *ngIf="createdrive.get('exprequired').errors?.required">Fill experience required</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="CTC">
+        <mat-label>CTC</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="ctc">
+        <mat-error *ngIf="createdrive.get('ctc').errors?.required">Ctc required</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+    <mat-form-field>
+      <mat-select placeholder="Joining Criteria" formControlName="joiningcriteria">
+        <mat-option value="0">No training and direct joining</mat-option>
+        <mat-option value="1">3 Months internship and then joining</mat-option>
+        <mat-error *ngIf="createdrive.get('joiningcriteria').errors?.required">Joining Criteria  required</mat-error>
+      </mat-select>
+    </mat-form-field>
+    </p>
+  
+    <p>
+      <mat-form-field appearance="Bond">
+        <mat-label>Bond</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="bond">
+        <mat-error *ngIf="createdrive.get('bond').errors?.required">Bond required</mat-error>
+      </mat-form-field>
+    </p>
+    
+  <p>
+    <mat-form-field>
+      <mat-select placeholder="Position"  formControlName="position">
+        <mat-option value="0">Full Stack Developer</mat-option>
+        <mat-option value="1">UI Developer</mat-option>
+        <mat-option value="2">Middleware and BackEnd</mat-option>
+        <mat-option value="3">Software Tester</mat-option>
+        <mat-error *ngIf="createdrive.get('position').errors?.required">Position required</mat-error>
+      </mat-select>
+    </mat-form-field>
+  </p>
+    <p>
+      <mat-form-field appearance="Follow">
+        <mat-label>FollowUp</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="follow">
+        <mat-error *ngIf="createdrive.get('follow').errors?.required">Follow up required</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+    <mat-form-field>
+      <mat-select placeholder="Education Criteria " formControlName="educriteria">
+        <mat-option value="0">BE,Comp/It</mat-option>
+        <mat-option value="1">BCA/MCA</mat-option>
+        <mat-option value="2">12th</mat-option>
+        <mat-error *ngIf="createdrive.get('educriteria').errors?.required">Education criteria  up required</mat-error>
+      </mat-select>
+    </mat-form-field>
+  </p>
+    <div class="button">
+      <button type="submit" mat-raised-button value="Submit" color ="primary">Submit</button>
+    </div>
+  
+  </form>
+  </mat-card-content>
+  </mat-card>
+<div>
+<!-- <br>
+{{createdrive.value|json}}
+<br>
+</div>
+ -->
